@@ -12,9 +12,11 @@
     --primary: #2b5fe0;
     --primary-2: #477cff;
     --dark: #252626;
+    --dark-2: #1d1d1d;
     --light: #e8edeb;
     --light-2: #f2f2f2;
 }
+
 
 /* Navbar */
 
@@ -38,7 +40,7 @@
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 60px 0 80px;
 }
 
 #navbar__logo {
@@ -60,7 +62,7 @@
     align-items: center;
     list-style: none;
     cursor: pointer;
-    margin: 0 1.2rem;
+    margin: 0 0 0 1.2rem;
 }
 
 .navbar__item {
@@ -169,7 +171,6 @@
     background-position: center;
     display: flex;
     flex-direction: column;
-
 }
 
 .hero::after {
@@ -187,7 +188,6 @@
     z-index: 1;
     position: relative;
     text-align: center;
-    
 }
 
 .hero__title {
@@ -278,7 +278,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 330px) {
     .hero__title {
         padding: 0 2rem;
     }
@@ -296,7 +296,7 @@
 /* Skills section */
 .skills {
     padding: 5em 2em;
-    background: #1d1d1d;
+    background: var(--dark-2);
     color: var(--light);
 }
 
@@ -307,13 +307,14 @@
 
 .skills__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     padding: 1rem;
 }
 
 .skills__card {
     padding: 2rem;
+    margin: 0 2rem;
     min-height: 450px;
     width: 325px;
     display: flex;
@@ -344,12 +345,6 @@
 @media screen and (max-width: 1150px) {
     .skills__card {
         width: 280px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .skills__card {
-        width: 250px;
     }
 }
 
@@ -462,12 +457,9 @@
 .btn-code:hover,
 .btn-primary:hover {
     transform: scale(1.05);
-    /* background: rgb(235, 200, 9);
-    background: linear-gradient(90deg, rgb(235, 200, 9) 0%, rgb(240, 221, 6) 100%);
-    color: darkblue; */
 }
 
-.fa-github,
+.mar-icon,
 .fa-chevron-right {
     margin-left: .5rem;
 }
@@ -484,7 +476,6 @@
 
 @media screen and (max-width: 990px) {
     .my-work__item {
-        flex-direction: column-reverse;
         flex-direction: column;
         justify-content: center;
     }
@@ -497,7 +488,6 @@
 
     .my-work__img--wrap {
         justify-content: center;
- 
     }
 
     .my-work__img {
@@ -544,6 +534,232 @@
     }
 }
 
+/* Hire me section */
+
+.hire-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+}
+
+.info__container {
+    width: 75%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-2);
+    border-radius: 3px;
+    padding: 4.5rem 6rem 4.5rem 7rem;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.info__container p {
+    font-size: 3rem;
+    color: #fff;
+    margin-left: 7.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.info__shape {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 6.5rem;
+}
+
+.info__img {
+    height: 60%;
+    border: solid 2px var(--primary);
+    transform: translateX(-4rem) scale(1.2);
+    border-radius: 50%;
+}
+
+.info__wrap {
+    display: flex;
+    max-height: 200px;
+} 
+
+.social-list {
+    display: flex;
+    height: 100px;
+    margin-top: 3rem;
+    margin-right: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.social-icon {
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin-right: 2.5rem;
+    color: var(--primary);
+}
+
+.social-icon:hover {
+    color: #1546c2;
+}
+
+
+@media screen and (max-width: 1180px) {
+    .social-list {
+        margin-right: 5.5rem;
+        margin-top: 2rem;
+    }
+
+    .info__wrap {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .info__wrap {
+        flex-direction: column;
+        margin-top: 2rem;
+        align-items: center;
+    }
+
+    .info__container p {
+        margin-left: 3rem;
+    }
+    
+    .info__shape {
+        width: 8rem;
+        height: 8rem;
+        margin-left: 8rem;
+    }
+
+    .info__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .social-list {
+        margin-top: 2.5rem;
+    }
+
+    .fa-linkedin{
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .info__container {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .info__container p {
+        margin: 0 0 1rem 0;
+    }
+
+    .social-list {
+        margin-right: 0;
+        margin-top: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .info__container p {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 350px)  {
+    .info__container p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Contact Form */
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__container p {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2.3rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-2);
+    width: 560px;
+    min-height: 460px;
+    border-radius: 12px;
+    padding: 1.5rem 0;
+    margin-bottom: 2.5rem;
+}
+
+input, 
+.message {
+    padding: 14px 32px 14px 16px;
+    border-radius: 6px;
+    border: 2px solid var(--primary);
+    outline: none;
+    width: 360px;
+    background: transparent;
+    color: var(--light);
+}
+
+input::placeholder {
+    color: rgb(190, 197, 197);
+}
+
+textarea {
+    resize: none;
+}
+
+.message {
+    margin-bottom: 1.5rem;
+}
+ 
+@media screen and (max-width: 600px) {
+    form {
+        width: 480px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .contact__container {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .contact__container p {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    input, 
+    .message {
+        width: 260px;
+    }
+
+    .contact__container p {
+        font-size: 1.8rem;
+    }
+}
 
 /* Animations */
 @keyframes pulse {
