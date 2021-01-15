@@ -761,6 +761,16 @@ textarea {
     }
 }
 
+/* Footer */
+.copyright {
+    color: #fff;
+    height: 60px;
+    background: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Animations */
 @keyframes pulse {
     0% {
